@@ -6,13 +6,16 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+    <%= stylesheet_link_tag 'main', media: 'all', 'data-turbo-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
   </head>
 
   <body>
     <%= render("shared/navigation") %>
-    <%= yield %>
+
+    <div class="container-fluid mt-4">
+      <%= yield %>
+    </div>
   </body>
 </html>
